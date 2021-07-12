@@ -28,6 +28,6 @@ minikube service mongo-express-service
 namespaces:
 kubectl create namespace [name]
 
-
 Other commands:
 kubectl cluster-info
+minikube addons enable ingress

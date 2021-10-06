@@ -44,3 +44,6 @@ kubectl delete -f [filename]
 
 #### Other commands:
 ```kubectl cluster-info```
+
+#### References
+Kubernetes tutorial [https://www.youtube.com/watch?v=X48VuDVv0do]

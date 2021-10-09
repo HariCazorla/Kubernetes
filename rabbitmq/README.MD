@@ -90,5 +90,39 @@ kubectl delete pod perf-test
 kubectl delete rabbitmqclusters.rabbitmq.com hello-world
 ```
 
+## Test client
+Login to RabbitMQ management portal and create a new user called "guest".
+
+<li> Set the following in appplication.properties
+
+```
+spring.profiles.active=usage
+test.client.duration=10000
+spring.rabbitmq.host=localhost
+spring.rabbitmq.port=5672
+spring.rabbitmq.username=guest
+spring.rabbitmq.password=guest
+```
+  
+<li> Build the jar using
+  
+```
+  mvn clean package
+```
+   
+<li> To run sender, run
+    
+  ```
+  java -jar rabbitmq-client-0.0.1-SNAPSHOT.jar --spring.profiles.active=test,sender
+  ```
+    
+<li> Open another terminal and run reciever
+    
+  ```
+    java -jar rabbitmq-client-0.0.1-SNAPSHOT.jar --spring.profiles.active=test,reciever
+  ```
+    
+  
 ## References
 This guide was created using [RabbitMQ tutorials](https://www.rabbitmq.com/kubernetes/operator/operator-overview.html)
+  

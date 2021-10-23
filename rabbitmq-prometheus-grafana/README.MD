@@ -70,5 +70,27 @@ kubectl port-forward service/prometheus-operated 9090
 
 Navigate to URL and verfiy [http://localhost:9090/targets](http://localhost:9090/targets)
 
+## Install Grafana
+
+```
+kubectl apply -f grafana/
+kubectl port-forward service/grafana 3000
+```
+
+Access Grafana dashboard using [http://localhost:3000/](http://localhost:3000/)
+
+Configure a Prometheus data source and use url [http://prometheus:9090](http://prometheus:9090) with default settings.
+
+Import a RabbitMQ overview dashboard using the json file provided or from dashboard ID "10991".
+
+## Cleanup
+
+```
+kubectl delete -f grafana
+kubectl delete -f prometheus
+kubectl delete -f rabbitmq
+kubectl delete -f https://github.com/rabbitmq/cluster-operator/releases/latest/download/cluster-operator.yml
+```
+
 
   

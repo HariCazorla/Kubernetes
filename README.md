@@ -5,6 +5,7 @@ A project to explore K8s concepts using minikube.
 1. [Monogo cluster](https://github.com/HariCazorla/Kubernetes-basics/tree/master/mongo)
 2. [RabbitMQ cluster](https://github.com/HariCazorla/Kubernetes-basics/tree/master/rabbitmq)
 3. [RabbitMQ Prometheus Grafana](https://github.com/HariCazorla/Kubernetes/tree/master/rabbitmq-prometheus-grafana)
+4. [Expense-tracker](https://github.com/HariCazorla/Kubernetes/tree/master/expense-tracker)
 
 ## kubectl commands
 #### Create deployment: 

@@ -1,8 +1,8 @@
 apiVersion: v1
 data:
   initdb.sql: |-
-    CREATE DATABASE expensetracker;
-    GRANT ALL PRIVILEGES ON DATABASE "expensetracker" TO postgres;
+    CREATE DATABASE flashcards;
+    GRANT ALL PRIVILEGES ON DATABASE "flashcards" TO postgres;
 kind: ConfigMap
 metadata:
   name: initdb
